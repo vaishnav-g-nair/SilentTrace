@@ -1,0 +1,41 @@
+silence:
+  default_minutes: 10
+  score_threshold: 70
+
+signals:
+  log_clear:
+    description: Log clear event detected
+    event_ids: ["1102", "104"]
+    weight: 50
+
+  config_change:
+    description: Logging configuration changed
+    keywords:
+      - audit
+      - logging
+      - rsyslog
+      - journald
+      - sysmon
+    weight: 40
+
+  agent_stop:
+    description: Logging or security agent stopped
+    keywords:
+      - service stopped
+      - agent stopped
+      - audit service stopped
+    weight: 40
+
+  activity_during_silence:
+    description: Activity occurred while logs were silent
+    field: external_activity
+    weight: 60
+
+suppressions:
+  reboot:
+    description: Legitimate system reboot or shutdown
+    keywords:
+      - system reboot
+      - shutting down
+      - boot sequence
+      - restarting system

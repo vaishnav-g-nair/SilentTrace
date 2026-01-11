@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Silence Hunter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>LOG SILENCE HUNTER</h2>
+    {% if error %}
+        <p style="color:#ff4d4d;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="upload-box">
+            <p>Drag & Drop CSV/JSON file here or click to browse</p>
+        </div>
+        <input type="file" name="logfile" required style="display:none;" id="file-input">
+        <button type="submit">INITIATE SCAN</button>
+    </form>
+
+    <div id="terminal" style="background:#1e1e1e; padding:10px; margin-top:20px; height:100px; overflow-y:auto; font-family:'Fira Code'; font-size:12px; color:#00ff41;"></div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    const uploadBox = document.querySelector(".upload-box");
+    const fileInput = document.getElementById("file-input");
+    uploadBox.addEventListener("click", () => fileInput.click());
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env/
+
+# Runtime files
+data/uploads/*
+output/*
+
+# OS junk
+.DS_Store
+

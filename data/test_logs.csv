@@ -1,0 +1,8 @@
+timestamp,host,source,event_type,event_id,message,external_activity
+2026-01-06T10:00:00Z,host1,windows_security,logon,4624,User logon successful,False
+2026-01-06T10:02:00Z,host1,windows_security,process_start,4688,Process created cmd.exe,False
+2026-01-06T10:04:00Z,host1,windows_system,service_stop,7036,Audit service stopped,False
+2026-01-06T10:30:00Z,host1,edr,process_start,,Malicious process executed,True
+2026-01-06T10:32:00Z,host1,network,connection,,Outbound connection detected,True
+2026-01-06T10:45:00Z,host1,windows_security,log_clear,1102,Security log cleared,False
+2026-01-06T10:47:00Z,host1,windows_security,logon,4624,User logon successful,False

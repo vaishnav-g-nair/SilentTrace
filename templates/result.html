@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>LOG SILENCE DETECTION RESULT</h2>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <!-- STAT CARDS -->
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Gaps</h3>
+                <p>{{ total_gaps }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Longest Silence</h3>
+                <p>{{ longest_silence }} mins</p>
+            </div>
+            <div class="stat-card">
+                <h3>Max Severity</h3>
+                <p>{{ max_severity }}</p>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+        {{ table|safe }}
+
+        <!-- TIMELINE (basic HTML bar) -->
+        {% if timeline %}
+        <h3>Timeline</h3>
+        <div style="background:#1e1e1e; padding:10px; border-radius:8px;">
+            {% for item in timeline %}
+                <div style="background-color:{{ item.color }}; width:{{ item.width }}%; height:20px; display:inline-block; margin-right:2px;" title="{{ item.label }}"></div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endif %}
+
+    <a href="/" style="color:#00ff41; display:block; margin-top:20px;">⬅ Back</a>
+</div>
+</body>
+</html>

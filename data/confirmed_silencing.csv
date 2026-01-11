@@ -1,0 +1,5 @@
+timestamp,host,event_id,message,external_activity
+2025-01-10T08:55:00Z,server1,1,Normal operation,false
+2025-01-10T09:00:00Z,server1,1102,Audit log cleared,true
+2025-01-10T09:02:00Z,server1,1,Logging configuration changed,true
+2025-01-10T09:45:00Z,server1,1,Activity detected,true

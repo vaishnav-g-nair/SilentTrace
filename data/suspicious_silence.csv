@@ -1,0 +1,6 @@
+timestamp,host,event_id,level,source,message
+2025-01-12T03:14:02Z,server-02,1001,INFO,system,System operating normally
+2025-01-12T03:14:08Z,server-02,4100,WARN,agent,Log collection agent stopping
+2025-01-12T03:14:10Z,server-02,4101,INFO,agent,Agent process terminated
+2025-01-12T03:20:35Z,server-02,4102,INFO,agent,Log collection agent started
+2025-01-12T03:20:40Z,server-02,1002,INFO,system,System operating normally
