@@ -65,7 +65,7 @@ Traditional detections focus on **what happened**.
 🧑‍💻 Author
 
 Vaishnav G Nair
-  Cybersecurity | Threat Detection | Digital Forensics
+  |Cybersecurity | Threat Detection | Digital Forensics
 
 If this project helped or inspired you, ⭐ the repository and feel free to connect.
 
@@ -78,4 +78,5 @@ Use only on systems you own or have explicit permission to analyze.
 
 SilentTrace focuses on an under-detected attack technique — log silencing.
 It demonstrates behavioral detection thinking, not signature-based detection.
+
 
